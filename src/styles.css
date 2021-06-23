@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+    
+    --normal: #A8A878;
+    --fighting: #C03028;
+    --flying: #A890F0;
+    --poison: #A040A0;
+    --ground: #E0C068;
+    --rock: #B8A038;
+    --bug: #A8B820;
+    --ghost: #705898;
+    --steel: #B8B8D0;
+
+    --fire: #F08030;
+    --water: #6890F0;
+    --grass: #6890F0;
+    --electric: #F8D030;
+    --psychic: #F85888;
+    --ice: #98D8D8;
+    --dragon: #7038F8;
+    --dark: #705848;
+    --fairy: #EE99AC;
+
+    --arceus: #7038F8;
+
+
+    --red: rgb(160, 36, 36);
+
+
+}
+
+/* Color Set Classes By Type */
+.normal-type {
+    background-color: var(--normal) !important;
+}
+
+.ghost-type {
+    background-color: var(--ghost) !important;
+}
+
+/* mat related classes */
+
+.mat-paginator-page-size-label {
+    display: none !important;
+}
+
+.mat-paginator-range-actions{
+    background-color: red;
+}
+
+/* main-toolbar */
+#main-toolbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: var(--red);
+}
+
+#main-toolbar h1 {
+    color: white;
+}
+
+#main-toolbar mat-icon{
+    position: absolute;
+    right: 10px;
+    color: white;
+}
+
+/* footer-toolbar */
+#footer-toolbar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--red);
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

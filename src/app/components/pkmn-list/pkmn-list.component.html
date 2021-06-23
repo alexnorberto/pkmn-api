@@ -1,0 +1,20 @@
+<p>pkmn-list works!</p>
+
+<ng-container *ngIf="fullPkmnList">
+    <div *ngFor="let pkmn of fullPkmnList" id="teste" style="margin-top: 100px;">        
+        {{pkmn.name}}       
+    </div>
+    <div *ngFor="let pkmn of fullPkmnSpriteList" id="teste">        
+        <img src={{pkmn.front_default}}>    
+    </div>
+</ng-container>
+  
+<mat-paginator [length]="fullPkmnListlength"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="pageSizeOptions"
+                showFirstLastButtons
+                (page)="onPaginate($event)">
+</mat-paginator>
+  
+
+
