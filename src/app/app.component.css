@@ -1,4 +1,44 @@
-.mat-paginator-page-size-label {
-    display: none !important;
-    margin: 100px !important
+#global-container {
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main-toolbar */
+#main-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--red);
+    height: 8vh !important;
+}
+
+#main-toolbar-title {
+    color: white;
+    cursor: pointer;
+}
+
+#main-toolbar mat-icon{
+    position: absolute;
+    right: 10px;
+    color: white;
+}
+
+#main-router-container{
+    height: 84vh !important;
+    width: 100%;
+    overflow: auto;
+}
+
+/* footer-toolbar */
+#footer-toolbar {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--red);
+    height: 8vh !important;
 }

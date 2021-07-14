@@ -1,1 +1,13 @@
-<p>pkmn-view works!</p>
+<div *ngIf="pkmnData.id" id="pkmn-view-container">
+    <div id="pkmn-view-carousel" >
+        <img id="pkmn-view-img" src={{pkmnData.sprite}}>
+    </div>
+
+    <div id="pkmn-view-router">
+        <router-outlet></router-outlet>
+    </div>
+
+
+</div>
+
+{{pkmnData.name}}

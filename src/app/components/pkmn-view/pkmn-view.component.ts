@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { PkmnApiService } from 'src/app/services/pkmn-api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pkmn-view',
@@ -7,11 +10,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PkmnViewComponent implements OnInit {
 
-  constructor() { }
+  pkmnData : any;
+
+  constructor(
+    private location:Location,
+    private pkmnApi:PkmnApiService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    document.getElementById("main-toolbar").style.backgroundColor = "var(--electric)";
-    document.getElementById("main-toolbar").textContent = "normal"
+    this.pkmnData = this.location.getState();
+
+    this.route.params.subscribe(params => {
+      this.pkmnData.id = +params['id'];
+    });
+    this.getPkmnById(this.pkmnData.id);
+
+    document.getElementById("main-toolbar-title").textContent = this.pkmnData.name;
+
+
+
+
+  }
+
+  getPkmnById(id):void{
+    this.pkmnApi.getPkmnById(id).subscribe(
+      pkmn => {
+        console.log(pkmn)
+        this.pkmnData = {
+          "name": pkmn.name,
+          "id": pkmn.id,
+          "sprite": pkmn.sprites.front_default,
+          "sprites": pkmn.sprites,
+          "type1": pkmn.types[0],
+          "type2": pkmn.types[1],
+          "stats": pkmn.stats,
+          "abilities": pkmn.abilities,
+          "base-exp": pkmn.base_experience,
+          "forms": pkmn.forms,
+          "location": pkmn.location_area_encounters,
+          "moves": pkmn.moves,
+          "species": pkmn.species.url,
+
+
+        };
+      }, e => console.log(e)
+    )
   }
 
 }

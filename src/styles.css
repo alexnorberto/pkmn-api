@@ -17,7 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     --fire: #F08030;
     --water: #6890F0;
-    --grass: #6890F0;
+    --grass: #68f06f;
     --electric: #F8D030;
     --psychic: #F85888;
     --ice: #98D8D8;
@@ -39,45 +39,44 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .ghost-type {
-    background-color: var(--ghost) !important;
+    background-image: linear-gradient(to right, var(--normal), var(--ghost) ) !important
 }
 
 /* mat related classes */
+
+.mat-paginator-container{
+    display: flex;
+    flex-wrap: nowrap !important;
+}
+.mat-paginator-page-size-select{
+    width: 35px !important;
+    margin-right: -3px !important;
+}
+
 
 .mat-paginator-page-size-label {
     display: none !important;
 }
 
-.mat-paginator-range-actions{
-    background-color: red;
-}
-
-/* main-toolbar */
-#main-toolbar {
-    position: fixed;
+.mat-paginator-range-label {
+    margin: 0 !important;
+    
+    margin-right: -3px !important;
     display: flex;
-    justify-content: center;
-    background-color: var(--red);
+    flex-wrap: nowrap !important;
+    white-space: nowrap;
 }
 
-#main-toolbar h1 {
-    color: white;
+#pkmn-list-paginator .mat-icon-button {
+    height: 40px;
+    width: 35px;
 }
 
-#main-toolbar mat-icon{
-    position: absolute;
-    right: 10px;
-    color: white;
-}
 
-/* footer-toolbar */
-#footer-toolbar {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    background-color: var(--red);
-}
+
+
+
+
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -94,3 +93,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+
+.grass {
+    background-color: cadetblue !important;
+}
+
+.fire {
+    background-color: cadetblue !important;
+}

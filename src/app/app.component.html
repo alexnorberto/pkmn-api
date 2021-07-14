@@ -1,12 +1,15 @@
-<mat-toolbar id="main-toolbar">
-    <h1 id="main-toolbar-title">POKEDEX</h1>
-    <mat-icon aria-hidden="false" aria-label="search icon">search</mat-icon>
-</mat-toolbar>
+<div id="global-container">
+    <mat-toolbar id="main-toolbar">
+        <h1 id="main-toolbar-title" routerLink="/">POKEDEX</h1>
+        <mat-icon aria-hidden="false" aria-label="search icon">search</mat-icon>
+    </mat-toolbar>
+
+    <div id="main-router-container">
+        <router-outlet></router-outlet>
+    </div>
 
 
-<router-outlet></router-outlet>
-
-
-<mat-toolbar id="footer-toolbar">
-    <h1 id="footer-toolbar-title">POKEDEX</h1>
-</mat-toolbar>
+    <mat-toolbar id="footer-toolbar">
+        <h1 id="footer-toolbar-title">POKEDEX</h1>
+    </mat-toolbar>
+</div>

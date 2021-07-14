@@ -1,4 +1,58 @@
-#teste{
-    background-color: aqua;
+#pkmn-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.pkmn-list-item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.3333%;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.pkmn-list-item:hover {
+    
+    cursor: pointer;
+    opacity: .8;
+
+}
+
+.pkmn-list-item img {
+    width: 80%;
+}
+
+.pkmn-list-name {
+    display: none;
+}
+
+.pkmn-list-id {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: white;
+    opacity: .5;
+}
+
+.pkmn-list-item:nth-child(3n+2) {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+}
+
+#pkmn-list-paginator {
+    position: relative;
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 

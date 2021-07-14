@@ -17,15 +17,22 @@ export class PkmnApiService {
     return this.http.get<any>(pkmnApiUrl);
   }
 
+  //Services for PkmnList
+
   getPkmnList(startPosition:number,pageLimit:number):Observable<any>{
     return this.http.get<any>(pkmnApiUrl+"pokemon?offset="+startPosition+"&limit="+pageLimit);
   }
+
+  getPkmnByUrl(url:string):Observable<any>{
+    return this.http.get<any>(url);
+  }
+
+  //Services for PkmnView
 
   getPkmnById(id):Observable<any>{
     return this.http.get<any>(pkmnApiUrl+"pokemon/"+id);
   }
 
-  getPkmnByUrl(url):Observable<any>{
-    return this.http.get<any>(url);
-  }
+
+
 }
